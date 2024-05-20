@@ -1,6 +1,6 @@
 # EMS
 
-## This is an Employee Management System that streamlines employee data management within an organisation
+## This is an Employee Management System that will include functionalities for user management, authentication, authorization, and CRUD operations for both administrators and employees. It will primarily focus on managing employee details such as personal information, contact details, and job-related data.
 
 ## Members
 | Name | email |
