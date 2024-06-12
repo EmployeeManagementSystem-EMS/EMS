@@ -26,10 +26,11 @@ public class EmployeeController {
     }
 
     // create employee REST API
-    @PostMapping("/employees") // this method will handle POST request at this endpoint
-    public Employee createEmployee(@RequestBody Employee employee) {
-        // RequestBody annotation is used to bind the request body to a method parameter
-        return employeeRepo.save(employee);
+    @PostMapping("/employees")
+    public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
+        Employee savedEmployee = employeeRepo.save(employee);
+    //ResponseEntity is used to provide more control over the HTTP response
+        return ResponseEntity.ok(savedEmployee);
     }
 
     // get employee by id REST API

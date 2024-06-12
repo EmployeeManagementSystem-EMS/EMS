@@ -21,4 +21,11 @@ public class UserController {
     public List<User> getAllUsers() {
         return userRepo.findAll();
     }
+
+    // create user with id already assigned
+    @PostMapping("/users")
+    public User createUser(@RequestBody User user) {
+        return userRepo.save(user);
+    }
+
 }
